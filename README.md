@@ -1,4 +1,4 @@
-# 🍕 Pizza API Challenge
+## 🍕 Pizza API Challenge 
 
 A Flask-based RESTful API that manages Pizzas, Restaurants, and the prices they charge at each restaurant.
 
@@ -10,20 +10,22 @@ A Flask-based RESTful API that manages Pizzas, Restaurants, and the prices they 
    ```bash
    git clone <your-repo-url>
    cd pizza-api-challenge
-Install dependencies using Pipenv
+## Install dependencies using Pipenv
 
 bash
 Copy
 Edit
 pipenv install flask flask_sqlalchemy flask_migrate
 pipenv shell
-Set Flask app environment variable
+
+## Set Flask app environment variable
 
 bash
 Copy
 Edit
 export FLASK_APP=server/app.py
-Run database migrations
+
+## Run database migrations
 
 bash
 Copy
@@ -33,15 +35,15 @@ flask db migrate -m "Initial migration"
 flask db upgrade
 Seed the database
 
-Add sample data in server/seed.py
+## Add sample data in server/seed.py
 
 Then run:
-
 bash
 Copy
 Edit
 python server/seed.py
-🗂 Route Summary
+
+## 🗂 Route Summary
 Method	URL	Description
 GET	/restaurants	List all restaurants
 GET	/restaurants/<id>	Get a specific restaurant with its pizzas
@@ -49,7 +51,7 @@ DELETE	/restaurants/<id>	Delete a restaurant
 GET	/pizzas	List all pizzas
 POST	/restaurant_pizzas	Associate a pizza with a restaurant
 
-📬 Example Requests & Responses
+## 📬 Example Requests & Responses
 GET /restaurants
 json
 Copy
@@ -107,14 +109,14 @@ Edit
     "address": "123 Main Street"
   }
 }
-✅ Validation Rules
+## ✅ Validation Rules
 price must be an integer between 1 and 30
 
 pizza_id and restaurant_id must be valid existing IDs
 
 JSON must be well-formatted and included in POST requests
 
-🧪 Postman Usage Instructions
+## 🧪 Postman Usage Instructions
 Start your Flask server
 
 bash
