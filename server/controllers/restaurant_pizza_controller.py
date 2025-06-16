@@ -10,7 +10,9 @@ restaurant_pizza_bp = Blueprint('restaurant_pizza_bp', __name__)
 @restaurant_pizza_bp.route('/restaurant_pizzas', methods=['POST'])
 def create_restaurant_pizza():
     data = request.get_json()
-
+    if not data:
+        return jsonify({ "error": "No JSON received or invalid format." }), 400
+    
     try:
         price = int(data.get('price'))
         pizza_id = int(data.get('pizza_id'))
